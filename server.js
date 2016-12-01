@@ -12,6 +12,10 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/js.js', function(req, res) {
+  res.sendFile(path.join(__dirname, 'js.js'));
+});
+
 app.listen(port, '0.0.0.0', function onStart(err) {
   if (err) console.log(err);
   console.info('==> Server started on port %s. Open up http://0.0.0.0:%s/ in your browser.', port, port);
